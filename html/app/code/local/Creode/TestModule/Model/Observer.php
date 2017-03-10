@@ -4,26 +4,17 @@ class Creode_TestModule_Model_Observer
 
 			public function incrementPrice(Varien_Event_Observer $observer)
 			{
-				// die('is working');
-				// echo '<pre>' . print_r($observer) . '</pre>';
-				// die;
+				$quote = $observer->getEvent()->getQuote();
+	            $item = $observer->getQuoteItem();
+	            $product_id=$item->getProductId();
+	            $product=Mage::getModel('catalog/product')->load($product_id);
 
-				//$product = $observer->getEvent()->getData()->getControlleraction()->getCookie;
-				$items = $observer->getEvent()->getItems();
-				echo "<pre>";
-				var_dump($items);
-				exit;
+	            echo '<pre>';
+	            print_r($product->getName());
+	            print_r($product->getCategoriess());
+	            exit;
 
-
-				// echo $product->getName();
-
-				// $cats = $product->getCategoryIds();
-				// foreach ($cats as $category_id) {
-				//     $_cat = Mage::getModel('catalog/category')->load($category_id) ;
-				//     echo $_cat->getName();
-				// }
-
-				
+				// Check for the product category and the setting catgory, if are the same apply the discount according to the other setting, and print a message
 
 
 

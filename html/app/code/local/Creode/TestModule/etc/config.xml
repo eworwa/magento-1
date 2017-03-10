@@ -18,7 +18,7 @@
 	  </testmodule>
 	</models>
    <events>
-    <sales_quote_product_add_after> <!-- identifier of the event we want to catch -->
+    <checkout_cart_product_add_after> <!-- identifier of the event we want to catch -->
         <observers>
           <sales_quote_product_add_after_handler> <!-- identifier of the event handler -->
             <type>model</type> <!-- class method call type; valid are model, object and singleton -->
@@ -27,7 +27,7 @@
             <args></args> <!-- additional arguments passed to observer -->
           </sales_quote_product_add_after_handler>
         </observers>
-      </sales_quote_product_add_after>
+      </checkout_cart_product_add_after>
     </events>
   </global>
 </config> 
