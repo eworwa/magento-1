@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <rateus_adminhtml_rateusbackend_index>
+	<reference name="content">
+	  <block type="rateus/adminhtml_rateusbackend" name="rateusbackend" template="rateus/rateusbackend.phtml"/>
+	</reference>
+  </rateus_adminhtml_rateusbackend_index>
+  <rateus_adminhtml_customercomment_index>
+	<reference name="content">
+	  <block type="rateus/adminhtml_customercomment" name="customercomment" />
+	</reference>
+  </rateus_adminhtml_customercomment_index>
+</layout>

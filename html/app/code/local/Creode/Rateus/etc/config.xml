@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Creode_Rateus>
+      <version>0.1.0</version>
+    </Creode_Rateus>
+  </modules>
+  <frontend>
+    <routers>
+      <rateus>
+        <use>standard</use>
+          <args>
+            <module>Creode_Rateus</module>
+            <frontName>rateus</frontName>
+          </args>
+      </rateus>
+    </routers>
+		<layout>
+		  <updates>
+			<rateus>
+			  <file>rateus.xml</file>
+			</rateus>
+		  </updates>
+		</layout>
+  </frontend>
+  <global>
+    <helpers>
+      <rateus>
+        <class>Creode_Rateus_Helper</class>
+      </rateus>
+    </helpers>
+	<blocks>
+	  <rateus>
+		<class>Creode_Rateus_Block</class>
+	  </rateus>
+	</blocks>
+	<models>
+	  <rateus>
+		<class>Creode_Rateus_Model</class>
+		<resourceModel>rateus_mysql4</resourceModel>
+	  </rateus>
+	  <rateus_mysql4>
+		<class>Creode_Rateus_Model_Mysql4</class>
+		<entities>		  
+			  <customercomment>
+				<table>customers_comments</table>
+			  </customercomment>
+        </entities>
+	  </rateus_mysql4>
+	</models>
+	<resources>
+	  <rateus_setup>
+		<setup>
+		  <module>Creode_Rateus</module>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </rateus_setup>
+	  <rateus_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </rateus_write>
+	  <rateus_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </rateus_read>
+	</resources>
+  </global>
+  <admin>
+	<routers>
+	  <rateus>
+	    <use>admin</use>
+		<args>
+		  <module>Creode_Rateus</module>
+		  <frontName>admin_rateus</frontName>
+		</args>
+	  </rateus>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+	  <rateus module="rateus">
+		<title>Rate Us</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <rateusbackend module="rateus">
+			<title>Customer comments</title>
+			<sort_order>0</sort_order>
+			<action>admin_rateus/adminhtml_rateusbackend</action>
+		  </rateusbackend>
+		  <customercomment module="rateus">
+		    <title>Manage Customercomment</title>
+			<sort_order>0</sort_order>
+			<action>admin_rateus/adminhtml_customercomment</action>
+		  </customercomment>
+		</children>
+	  </rateus>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<rateus translate="title" module="rateus">
+			  <title>Rateus</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <rateusbackend translate="title">
+			<title>Customer comments</title>
+		  </rateusbackend>
+		  <customercomment translate="title">
+			<title>Manage Customercomment</title>
+			<sort_order>0</sort_order>
+		  </customercomment>
+			  </children>
+			</rateus>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<rateus>
+		  <file>rateus.xml</file>
+		</rateus>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 
