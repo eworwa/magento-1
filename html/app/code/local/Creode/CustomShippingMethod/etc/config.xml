@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Creode_CustomShippingMethod>
+      <version>0.1.0</version>
+    </Creode_CustomShippingMethod>
+  </modules>
+  <global>
+    <helpers>
+      <customshippingmethod>
+        <class>Creode_CustomShippingMethod_Helper</class>
+      </customshippingmethod>
+    </helpers>
+	<models>
+	  <customshippingmethod>
+		<class>Creode_CustomShippingMethod_Model</class>
+		<resourceModel>customshippingmethod_mysql4</resourceModel>
+	  </customshippingmethod>
+	</models>
+	<resources>
+	  <categoryattribute1490178134_setup>
+		<setup>
+		  <module>Creode_CustomShippingMethod</module>
+		  <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </categoryattribute1490178134_setup>
+	  <categoryattribute1490178134_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </categoryattribute1490178134_write>
+	  <categoryattribute1490178134_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </categoryattribute1490178134_read>
+	</resources>
+  </global>    
+	<default>
+        <carriers>
+            <custom_shipping_method>
+                <active>1</active>
+                <model>customshippingmethod/carrier_custom_shipping_method</model>
+                <name>Custom Shipping Method</name>
+                <title>Custom Shipping Method</title>
+                <description>Custom shipping method, this is the best option if you're located in the UK</description>
+                <sort_order>0</sort_order>
+            </custom_shipping_method>
+        </carriers>
+    </default>
+</config> 
