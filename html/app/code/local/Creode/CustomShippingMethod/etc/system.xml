@@ -3,14 +3,14 @@
 	  <sections>
 		<carriers  translate="label" module="customshippingmethod">            
 					<groups>
-				      <custom_shipping_method translate="label"> 
+				      <customshippingmethod translate="label"> 
 					  <label>Custom Shipping Method</label>
 					  <frontend_type>text</frontend_type>
 					  <sort_order>0</sort_order>
 					  <show_in_default>1</show_in_default>
 					  <show_in_website>1</show_in_website>
 					  <show_in_store>1</show_in_store>
-					  <model>customshippingmethod/carrier_custom_shipping_method</model>
+					  <model>customshippingmethod/carrier_customshippingmethod</model>
 				       <fields>                        
 				         <active translate="label">
                             <label>Enabled</label>
@@ -55,7 +55,7 @@
                             <sort_order>100</sort_order>
                         </sort_order>
 					   </fields>
-					   </custom_shipping_method>
+					   </customshippingmethod>
 					</groups>
 		</carriers>
 	  </sections>

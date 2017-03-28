@@ -1,9 +1,9 @@
 <?php  
-    class Creode_CustomShippingMethod_Model_Carrier_Custom_Shipping_Method     
+    class Creode_CustomShippingMethod_Model_Carrier_Customshippingmethod     
 		extends Mage_Shipping_Model_Carrier_Abstract
 		implements Mage_Shipping_Model_Carrier_Interface
 	{  
-        protected $_code = 'custom_shipping_method';  
+        protected $_code = 'customshippingmethod';  
       
         /** 
         * Collect rates for this shipping method based on information in $request 

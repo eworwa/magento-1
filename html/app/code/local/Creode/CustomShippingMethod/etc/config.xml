@@ -16,9 +16,14 @@
 		<class>Creode_CustomShippingMethod_Model</class>
 		<resourceModel>customshippingmethod_mysql4</resourceModel>
 	  </customshippingmethod>
+	  <shipping>
+	        <rewrite>
+	            <shipping>Creode_CustomShippingMethod_Model_Carrier_Shipping</shipping>
+	        </rewrite>
+	    </shipping>
 	</models>
 	<resources>
-	  <categoryattribute1490178134_setup>
+	  <categoryattribute1490692381_setup>
 		<setup>
 		  <module>Creode_CustomShippingMethod</module>
 		  <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
@@ -26,29 +31,29 @@
 		<connection>
 		  <use>core_setup</use>
 		</connection>
-	  </categoryattribute1490178134_setup>
-	  <categoryattribute1490178134_write>
+	  </categoryattribute1490692381_setup>
+	  <categoryattribute1490692381_write>
 		<connection>
 		  <use>core_write</use>
 		</connection>
-	  </categoryattribute1490178134_write>
-	  <categoryattribute1490178134_read>
+	  </categoryattribute1490692381_write>
+	  <categoryattribute1490692381_read>
 		<connection>
 		  <use>core_read</use>
 		</connection>
-	  </categoryattribute1490178134_read>
+	  </categoryattribute1490692381_read>
 	</resources>
   </global>    
 	<default>
         <carriers>
-            <custom_shipping_method>
+            <customshippingmethod>
                 <active>1</active>
-                <model>customshippingmethod/carrier_custom_shipping_method</model>
-                <name>Custom Shipping Method</name>
+                <model>customshippingmethod/carrier_customshippingmethod</model>
+                <name>customShippingMethod</name>
                 <title>Custom Shipping Method</title>
-                <description>Custom shipping method, this is the best option if you're located in the UK</description>
+                <description>Custom Shipping method</description>
                 <sort_order>0</sort_order>
-            </custom_shipping_method>
+            </customshippingmethod>
         </carriers>
     </default>
 </config> 

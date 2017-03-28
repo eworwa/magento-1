@@ -50,4 +50,4 @@ $installer->addAttribute("catalog_product", "apply_custom_shipping_method",  arr
 
     ));
 $installer->endSetup();
-	 
+     
