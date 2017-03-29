@@ -16,11 +16,14 @@
 		<class>Creode_CustomShippingMethod_Model</class>
 		<resourceModel>customshippingmethod_mysql4</resourceModel>
 	  </customshippingmethod>
-	  <shipping>
-	        <rewrite>
-	            <shipping>Creode_CustomShippingMethod_Model_Carrier_Shipping</shipping>
-	        </rewrite>
-	    </shipping>
+
+		<shipping>
+			<rewrite>
+				<shipping>Creode_CustomShippingMethod_Model_Shipping_Shipping</shipping>
+			</rewrite>
+		</shipping>
+
+
 	</models>
 	<resources>
 	  <categoryattribute1490692381_setup>
