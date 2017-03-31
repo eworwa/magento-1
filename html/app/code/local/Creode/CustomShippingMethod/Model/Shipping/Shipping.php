@@ -5,7 +5,9 @@ class Creode_CustomShippingMethod_Model_Shipping_Shipping extends Mage_Shipping_
     public function collectCarrierRates($carrierCode, $request)
     {
         if ($carrierCode === 'customshippingmethod') {
-            // @todo get real values from parameter
+
+            $orderIsElegible = true;
+            
             $helper = Mage::helper('customshippingmethod');
             $categoriesCustomShippingMethod = $helper->getCategoriesIdWithCustomShippingMethod();
 
@@ -18,15 +20,15 @@ class Creode_CustomShippingMethod_Model_Shipping_Shipping extends Mage_Shipping_
                 $productIsCustomShippingMethod = $product->getData('apply_custom_shipping_method');
                 $productCategories = $product->getCategoryIds();
 
-                if(!$productIsCustomShippingMethod) {
-                    // There is at least one product not shippable with Custom Shipping Method
-                    return $this;
+                if(!$productIsCustomShippingMethod && count(array_intersect($productCategories, $categoriesCustomShippingMethod)) <= 0) {
+                    // This product is not shippable with Custom Shipping Method at all
+                    // therefore the entire order is not shippable through this method
+                    $orderIsElegible = false;
                 }
+            }
 
-                if(count(array_intersect($productCategories, $categoriesCustomShippingMethod)) < 0) {
-                    // There is at least one product withouth a category enabled for been shippable with Custom Shipping Method
-                    return $this;
-                }
+            if(!$orderIsElegible) {
+                return $this;
             }
         }
         
