@@ -2,8 +2,17 @@
 class Creode_CustomShippingMethod_Helper_Data extends Mage_Core_Helper_Abstract
 {
 	function getCategoriesIdWithCustomShippingMethod() {
-		$categoriesId = array(1,2,3,4,5,6,7);
+		$categoriesId = array();
 
+		$categories = Mage::getModel('catalog/category')
+                    ->getCollection()
+                    ->addAttributeToSelect('*')
+                    ->addFieldToFilter('apply_custom_shipping_method', 1)
+                    ->addIsActiveFilter();
+
+        foreach ($categories as $id => $category) {
+        	$categoriesId[] = $id;
+        }
 
 		return $categoriesId;
 	}
