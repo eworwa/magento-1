@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+    <default translate="label">
+    	<reference name="head">
+    		<action method="addCss"><stylesheet>css/creode-styles.css</stylesheet></action>
+    	</reference>
+    	<reference name="root">
+	    	<block type="core/text_list" name="homepage-top-left" translate="label">
+	            <label>Homepage top left</label>
+	        </block>
+        </reference>
+    </default>
+</layout>
