@@ -50,10 +50,26 @@
         <div class="main-container col1-layout">
             <div class="main">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
-                <div class="col-main">
+
+                <div class="image-gallery layout">
+                	Here the gallery slide
+                </div>
+
+                <div class="main-first-row layout">
+                	<div class="left cell-box layout">Here the image, it should be float left</div>
+                	<div class="right cell-box layout">Here 4 imagenes, should be right</div>
+                </div>
+                <div class="promoted-content-slider layout">
+                	Here promoted content slider
+                </div>
+                <div class="footer-text layout">
+                	Here custom footer text
+                </div>
+
+                <!-- <div class="col-main">
                     <?php echo $this->getChildHtml('global_messages') ?>
                     <?php echo $this->getChildHtml('content') ?>
-                </div>
+                </div> -->
             </div>
         </div>
         <?php echo $this->getChildHtml('footer_before') ?>

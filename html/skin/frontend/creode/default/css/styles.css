@@ -1,0 +1,9 @@
+.layout {
+	border: solid 1px red;
+	padding: 10px 5px;
+}
+
+.main-first-row .cell-box {
+    width: 49%;
+    display: inline-block;
+}
