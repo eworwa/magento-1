@@ -5,16 +5,29 @@
         <version>0.1.0</version>
         </Homepage>
      </modules>
-           <global>
-               <page>
-                 <layouts>
-                    <homepage translate="label">
-                           <label>Home_page</label>
-                             <template>page/homepage.phtml</template>
-                           <layout_handle>home_page</layout_handle>
-                    </homepage>
-                <!-- add more layouts here -->
-                 </layouts>
-               </page>
-          </global>
+     <global>
+         <page>
+           <layouts>
+              <homepage translate="label">
+                     <label>Home_page</label>
+                       <template>page/homepage.phtml</template>
+                     <layout_handle>home_page</layout_handle>
+              </homepage>
+          <!-- add more layouts here -->
+           </layouts>
+         </page>
+
+          <helpers>
+            <homepage>
+              <class>Creode_Homepage_Helper</class>
+            </homepage>
+          </helpers>
+
+
+          <blocks>
+            <homepage>
+              <class>Creode_Homepage_Block</class>
+            </homepage>
+          </blocks>
+    </global>
  </config>
