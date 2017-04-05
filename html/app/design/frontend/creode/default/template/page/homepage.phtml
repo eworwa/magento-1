@@ -52,18 +52,18 @@
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
 
                 <div class="image-gallery layout">
-                	Here the gallery slide
+                	<?php echo $this->getChildHtml('homepage-top') ?>
                 </div>
 
                 <div class="main-first-row layout">
                 	<div class="left cell-box layout"><?php echo $this->getChildHtml('homepage-top-left') ?></div>
-                	<div class="right cell-box layout">Here 4 imagenes, should be right</div>
+                	<div class="right cell-box layout"><?php echo $this->getChildHtml('homepage-top-right') ?></div>
                 </div>
                 <div class="promoted-content-slider layout">
-                	Here promoted content slider
+                	<?php echo $this->getChildHtml('homepage-bottom-1') ?>
                 </div>
                 <div class="footer-text layout">
-                	Here custom footer text
+                	<?php echo $this->getChildHtml('homepage-bottom-2') ?>
                 </div>
 
                 <!-- <div class="col-main">

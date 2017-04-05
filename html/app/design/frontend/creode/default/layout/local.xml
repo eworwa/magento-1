@@ -6,9 +6,21 @@
     		<action method="addCss"><stylesheet>css/creode-styles.css</stylesheet></action>
     	</reference>
     	<reference name="root">
+            <block type="core/text_list" name="homepage-top" translate="label">
+                <label>Homepage top</label>
+            </block>
 	    	<block type="core/text_list" name="homepage-top-left" translate="label">
-	            <label>Homepage top left</label>
-	        </block>
+                <label>Homepage top left</label>
+            </block>
+            <block type="core/text_list" name="homepage-top-right" translate="label">
+                <label>Homepage top right</label>
+            </block>
+            <block type="core/text_list" name="homepage-bottom-1" translate="label">
+                <label>Homepage bottom 1</label>
+            </block>
+            <block type="core/text_list" name="homepage-bottom-2" translate="label">
+                <label>Homepage bottom 2</label>
+            </block>
         </reference>
     </default>
 </layout>
