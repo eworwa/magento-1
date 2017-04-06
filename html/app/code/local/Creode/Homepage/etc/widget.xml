@@ -54,4 +54,19 @@
             </image1>
         </parameters>
     </homepage_homepageimagead>
+
+    <homepage_homepagebottomtext type="homepage/homepagebottomtext" translate="name description" module="homepage">
+        <name>Homepage bottom text</name>
+        <description type="desc">Bottom text for the homepage</description>
+        <parameters>
+            <text33>
+                <label>Bottom text</label>
+                <required>1</required>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>10</sort_order>
+                <value>title</value>
+            </text33>
+        </parameters>
+    </homepage_homepagebottomtext>
 </widgets>
