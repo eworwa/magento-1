@@ -4,7 +4,7 @@
         <name>Homepage Banner Slide</name>
         <description type="desc">Banner slide for the homepage</description>
         <parameters>
-		    <title>
+            <title>
                 <label>Title</label>
                 <required>1</required>
                 <visible>1</visible>
@@ -30,4 +30,28 @@
             </image>
         </parameters>
     </homepage_homepagebannerslide>
+
+    <homepage_homepageimagead type="homepage/homepageimagead" translate="name description" module="homepage">
+        <name>Homepage Image Ad</name>
+        <description type="desc">Image Ad for the homepage</description>
+        <parameters>
+            <title1>
+                <label>Title</label>
+                <required>1</required>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>10</sort_order>
+                <value>title</value>
+                <description>Will be used for display on mouse hover</description>
+            </title1>
+            <image1>
+                <label>Image</label>
+                <required>1</required>
+                <visible>1</visible>
+                <type>widgetimagechooser/chooser</type>
+                <sort_order>30</sort_order>
+                <value>imageadAd</value>
+            </image1>
+        </parameters>
+    </homepage_homepageimagead>
 </widgets>
