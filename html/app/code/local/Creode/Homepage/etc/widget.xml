@@ -26,7 +26,6 @@
                 <visible>1</visible>
                 <type>widgetimagechooser/chooser</type>
                 <sort_order>30</sort_order>
-                <value>banner</value>
             </image>
         </parameters>
     </homepage_homepagebannerslide>
@@ -50,7 +49,6 @@
                 <visible>1</visible>
                 <type>widgetimagechooser/chooser</type>
                 <sort_order>30</sort_order>
-                <value>imageadAd</value>
             </image1>
         </parameters>
     </homepage_homepageimagead>
