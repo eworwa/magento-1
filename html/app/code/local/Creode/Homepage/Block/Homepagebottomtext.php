@@ -9,7 +9,7 @@ class Creode_Homepage_Block_Homepagebottomtext
         // $text = $this->getData('text');
         // die;
         
-        $text = "aqui";
+        $text = $this->getData('text33');
         
 		$html ='';
         // $html .= 'homepagebannerslide parameter1 = '.$this->getData('parameter1').'<br/>';
@@ -18,7 +18,6 @@ class Creode_Homepage_Block_Homepagebottomtext
         // $html .= 'homepagebannerslide parameter4 = '.$this->getData('parameter4').'<br/>';
         // $html .= 'homepagebannerslide parameter5 = '.$this->getData('parameter5').'<br/>';
 
-        // $html = $this->getData('title') . ' - ' . $this->getData('text');
         $html .= '<div class="homepage-bottom-text"><p>' . $text . '</p></div>';
         return $html;
     }
