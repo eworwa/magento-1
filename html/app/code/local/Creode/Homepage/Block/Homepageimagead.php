@@ -16,7 +16,7 @@ class Creode_Homepage_Block_Homepageimagead
         // $html .= 'homepagebannerslide parameter4 = '.$this->getData('parameter4').'<br/>';
         // $html .= 'homepagebannerslide parameter5 = '.$this->getData('parameter5').'<br/>';
 
-        // $html = $this->getData('title') . ' - ' . $this->getData('text');
+        // $html = $this->getData('title1') ;
         $html .= '<img src="' . $imagePath . '" alt="' .$title . '" title="' .$title . '" />';
         return $html;
     }
